@@ -13,11 +13,17 @@ change is needed. Outside herdr the hook is a no-op.
 ## Install
 
 ```bash
-dcode plugin marketplace add /path/to/dcode_hedr_plugin
+dcode plugin marketplace add flemx/dcode-herdr-plugin
 dcode plugin install herdr@herdr-local
 ```
 
+Or from a running session: `/plugins` → **Marketplaces** → add `flemx/dcode-herdr-plugin`,
+then install `herdr`.
+
 Then start a new dcode session (or `/reload` in a running one) inside a herdr pane.
+
+For local development, add a clone instead:
+`dcode plugin marketplace add /path/to/dcode-herdr-plugin`.
 
 Requires `python3` on `PATH` (stdlib only) and herdr >= 0.9.2 for resume.
 
