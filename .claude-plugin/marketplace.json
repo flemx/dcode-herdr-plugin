@@ -1,0 +1,10 @@
+{
+  "name": "herdr-local",
+  "plugins": [
+    {
+      "name": "herdr",
+      "source": "./plugins/herdr",
+      "description": "Report dcode state to herdr so it shows in the sidebar, notifies, and resumes after restart"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          { "type": "command", "command": "python3 herdr_report.py", "argv": ["python3", "${PLUGIN_ROOT}/hooks/herdr_report.py", "${PLUGIN_DATA}"], "timeout": 5 }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "type": "command", "command": "python3 herdr_report.py", "argv": ["python3", "${PLUGIN_ROOT}/hooks/herdr_report.py", "${PLUGIN_DATA}"], "timeout": 5 }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          { "type": "command", "command": "python3 herdr_report.py", "argv": ["python3", "${PLUGIN_ROOT}/hooks/herdr_report.py", "${PLUGIN_DATA}"], "timeout": 5 }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt|agent_needs_input|elicitation_dialog|elicitation_response|elicitation_complete|agent_completed",
+        "hooks": [
+          { "type": "command", "command": "python3 herdr_report.py", "argv": ["python3", "${PLUGIN_ROOT}/hooks/herdr_report.py", "${PLUGIN_DATA}"], "timeout": 5 }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          { "type": "command", "command": "python3 herdr_report.py", "argv": ["python3", "${PLUGIN_ROOT}/hooks/herdr_report.py", "${PLUGIN_DATA}"], "timeout": 5 }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "*",
+        "hooks": [
+          { "type": "command", "command": "python3 herdr_report.py", "argv": ["python3", "${PLUGIN_ROOT}/hooks/herdr_report.py", "${PLUGIN_DATA}"], "timeout": 5 }
+        ]
+      }
+    ]
+  }
+}

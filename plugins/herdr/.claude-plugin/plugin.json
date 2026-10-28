@@ -1,0 +1,6 @@
+{
+  "name": "herdr",
+  "version": "0.1.0",
+  "description": "Report dcode idle/working/blocked state and resume command to herdr",
+  "hooks": "./hooks/hooks.json"
+}
